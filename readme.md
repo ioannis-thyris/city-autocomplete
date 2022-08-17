@@ -68,15 +68,45 @@ Click Code -> Download Zip to download the files of the repository. Extract the 
 
 Open Docker Desktop, which you downloaded earlier. **Make sure that Docker Desktop is up and running while using the service, as it wont operate otherwise.**
 
+Please note that on Windows systems, the WSL 2 Linux kernel must be installed in order to run Docker Desktop. To enable WSL 2 follow [these](https://docs.microsoft.com/en-au/windows/wsl/install-manual) instructions.
+
+Install your disto of choice run the command:
+
+```
+wsl --install -d <Distro>
+```
+
+For a list of the available distos run the following command:
+
+```
+wsl --list --online
+```
+
+Make sure that your disto is running on WSL 2, before moving on. To check the version of WSL of your distros run:
+
+```
+wsl -l -v
+```
+
+If the version is "1" update your distro to WSL 2, by running the following command:
+
+```
+wsl --set-version <distro name> 2
+```
+
 ### 4. Run Docker Compose
 
 Open a command prompt and navigate to the folder containing the files of the repository that you downloaded earlier. Use the following command:
 
-`cd $Path to the folder$`
+```
+cd <folder path>
+```
 
 The folder contains the "docker-compose.yml" file needed to initialize the service. Run the following command to start Docker Compose:
 
-`docker-compose up -d`
+```
+docker-compose up -d
+```
 
 This should start the procedure of pulling the neccessary images and setting up the containers. **The images that will be downloaded have a total size of ~2.3GB.**
 
