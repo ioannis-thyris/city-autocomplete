@@ -24,7 +24,7 @@ The service is based on the following techologies:
 3. [ASP.NET Core Minimal API](#api)
 4. [Docker](#docker)
 
-### Database
+### Geonames Database
 
 Cities of the world with population above 1000 are stored in a database provided by [Geonames](https://public.opendatasoft.com/explore/dataset/geonames-all-cities-with-a-population-1000/information/?disjunctive.cou_name_en&sort=name). The database contains more than 140.000 cities and the specifications can be found in the link above. A cool feature is that there are alternative names provided for each city (eg. local names, names in different languages etc), giving flexibility on the name that a user can search for.
 
@@ -70,19 +70,19 @@ Open Docker Desktop, which you downloaded earlier. **Make sure that Docker Deskt
 
 Please note that on Windows systems, the WSL 2 Linux kernel must be installed in order to run Docker Desktop. To enable WSL 2 follow [these](https://docs.microsoft.com/en-au/windows/wsl/install-manual) instructions.
 
-Install your disto of choice run the command:
+Install your distro of choice run the command:
 
 ```
 wsl --install -d <Distro>
 ```
 
-For a list of the available distos run the following command:
+For a list of the available distros run the following command:
 
 ```
 wsl --list --online
 ```
 
-Make sure that your disto is running on WSL 2, before moving on. To check the version of WSL of your distros run:
+Make sure that your distro is running on WSL 2, before moving on. To check the version of WSL of your distros run:
 
 ```
 wsl -l -v
@@ -187,4 +187,4 @@ The response consists of a JSON with up to 5 cities. The output format is:
 ]
 ```
 
-The internal query to Elasticsearch is made in a way that the results appear with descending order of relevance, weighted by each city's population. As a result, cities with greater population will tend to appear higher in the results. If you wish, you can override this behaviour by altering the query in the API.
+The internal query to Elasticsearch is made in a way that the results appear with descending order of relevance, weighted by each city's population. As a result, cities with greater population will tend to appear higher in the results. If you wish, you can override this behavior by altering the query in the API.
