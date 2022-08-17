@@ -19,9 +19,9 @@ The service is intended for applications in development phase, mainly for testin
 
 The service is based on the following techologies:
 
-1. [Geonames Database](#database)
-2. [Elasticsearch/Kibana](#elk)
-3. [ASP.NET Core Minimal API](#api)
+1. [Geonames Database](geonames-database)
+2. [Elasticsearch/Kibana](#elasticsearchkibana)
+3. [ASP.NET Core Minimal API](#aspnet-core-minimal-api)
 4. [Docker](#docker)
 
 ### Geonames Database
