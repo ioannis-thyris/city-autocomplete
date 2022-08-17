@@ -56,13 +56,13 @@ The OS for the container is set to Linux.
 
 The following steps describe the way to run the service:
 
-### 1. Install Docker Desktop
+### 1. Download the contents of the repository
 
-The Docker Desktop can be downloaded [here](https://docs.docker.com/desktop/), by clicking the "Install" links on the sidebar. Please make sure to download the version for your OS and follow the instructions carefully.
+Click Code -> Download Zip to download the files of the repository. Extract the .zip file and save contents (you will need the folder path later).
 
-### 2. Download the contents of the repository
+### 2. Install Docker Desktop
 
-Click Code -> Download Zip to download the files of the repository. Extract the .zip file contents (you will need the folder path later).
+The Docker Desktop can be downloaded [here](https://docs.docker.com/desktop/), by clicking the "Install" links on the sidebar. Please make sure to download the version suitable for your OS and follow the installation instructions carefully.
 
 ### 3. Open Docker Desktop
 
@@ -70,7 +70,7 @@ Open Docker Desktop, which you downloaded earlier. **Make sure that Docker Deskt
 
 Please note that on Windows systems, the WSL 2 Linux kernel must be installed in order to run Docker Desktop. To enable WSL 2 follow [these](https://docs.microsoft.com/en-au/windows/wsl/install-manual) instructions.
 
-Install your distro of choice run the command:
+To install your distro of choice run the command:
 
 ```
 wsl --install -d <Distro>
@@ -82,13 +82,13 @@ For a list of the available distros run the following command:
 wsl --list --online
 ```
 
-Make sure that your distro is running on WSL 2, before moving on. To check the version of WSL of your distros run:
+Before moving on, make sure that your distro is running on WSL 2. To check the WSL version of your distros, run the command:
 
 ```
 wsl -l -v
 ```
 
-If the version is "1" update your distro to WSL 2, by running the following command:
+If the version is "1", update your distro to WSL 2 by running the following command:
 
 ```
 wsl --set-version <distro name> 2
@@ -96,7 +96,7 @@ wsl --set-version <distro name> 2
 
 ### 4. Run Docker Compose
 
-Open a command prompt and navigate to the folder containing the files of the repository that you downloaded earlier. Use the following command:
+Open a command prompt and navigate to the folder containing the files of the repository that you extracted earlier. Use the following command:
 
 ```
 cd <folder path>
@@ -134,7 +134,7 @@ and you can successfully open the Kibana in your browser.
 
 ## Usage
 
-The API provides the two following endpoints:
+The API provides the following two endpoints:
 
 1. `http://localhost:8000/clusterhealth`
 2. `http://localhost:8000/autocomplete`
